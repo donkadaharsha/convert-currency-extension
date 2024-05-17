@@ -1,0 +1,39 @@
+# Currency Converter Extension
+This extension provides a simple currency conversion tool that allows users to convert between different currencies using real-time exchange rates.
+
+## Features
+- Select the currency you want to convert from and to.
+- Enter the amount to convert.
+- Click the "Convert" button to see the converted amount.
+
+## How to use
+Clone or download the repository from GitHub to your local machine.
+Open Google Chrome and go to chrome://extensions/.
+Enable "Developer mode" by toggling the switch in the top right corner.
+Click on the "Load unpacked" button and select the extracted folder containing the extension files.
+Once loaded, the extension will be added to Chrome. Click on its icon to open it and start using.
+
+## Implementation details
+## Fetching Data from API
+This extension fetches exchange rate data from the Currency Beacon API (https://currencybeacon.com/). It uses the `/convert` endpoint to perform currency conversion based on the selected currencies and the amount entered by the user.
+
+The API request is constructed with the following parameters:
+- `from`: The currency code to convert from.
+- `to`: The currency code to convert to.
+- `amount`: The amount to convert.
+- `api_key`: API key for authentication.
+
+Example API request:
+```
+https://api.currencybeacon.com/v1/convert?from=EUR&to=USD&amount=100&api_key=YOUR_API_KEY
+```
+
+Upon receiving the response from the API, the extension displays the converted amount on the page.
+
+## Developer Information
+- **Name**: Exchange rates
+- **Version**: 1.0
+- **Manifest Version**: 3
+- **Description**: Extension to convert currencies
+- **Action**: Specifies the default popup page as "index.html"
+

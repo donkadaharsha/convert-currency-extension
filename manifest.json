@@ -1,0 +1,9 @@
+{
+    "name": "Exchange rates",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Extension to covert currencies",
+    "action": {
+        "default_popup": "index.html"
+    }
+}
